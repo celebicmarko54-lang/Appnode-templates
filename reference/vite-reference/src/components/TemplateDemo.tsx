@@ -1,10 +1,8 @@
-/**
- * Demo-only content.
- *
- * When building your actual app UI, remove/ignore demo code.
- */
-export const HAS_TEMPLATE_DEMO = false;
+// Template demo component - placeholder only.
+// This file exists for template compatibility. The demo UI has been removed.
+
+export const HAS_TEMPLATE_DEMO = false
 
 export function TemplateDemo() {
-  return null;
+  return null
 }
