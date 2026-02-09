@@ -119,7 +119,14 @@
     background-clip: text;
     -webkit-text-fill-color: transparent;
   }
-  
+
+  .text-gradient-blue {
+    background: linear-gradient(90deg, #3b82f6 0%, #60a5fa 50%, #93c5fd 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
   .text-pretty {
     text-wrap: pretty;
   }
@@ -185,5 +192,118 @@
   
   .text-body {
     @apply text-base sm:text-lg text-muted-foreground leading-relaxed;
+  }
+
+  /* Construction Cranes Animation System */
+  .cranes-container {
+    display: flex;
+    align-items: flex-end;
+    gap: 0;
+    position: relative;
+  }
+
+  .crane {
+    filter: drop-shadow(0 0 8px rgba(59, 130, 246, 0.3));
+  }
+
+  .crane-left {
+    animation: crane-sway-left 4s ease-in-out infinite;
+    transform-origin: 45px 85px;
+  }
+
+  .crane-right {
+    animation: crane-sway-right 4.5s ease-in-out infinite;
+    transform-origin: 45px 85px;
+  }
+
+  .building-progress {
+    align-self: flex-end;
+    margin-bottom: 0;
+    filter: drop-shadow(0 0 6px rgba(59, 130, 246, 0.2));
+  }
+
+  .crane-arm-left {
+    animation: arm-swing-left 3s ease-in-out infinite;
+    transform-origin: 45px 20px;
+  }
+
+  .crane-arm-right {
+    animation: arm-swing-right 3.5s ease-in-out infinite;
+    transform-origin: 45px 24px;
+  }
+
+  .cable-left, .hook-left {
+    animation: hook-bob 2.5s ease-in-out infinite;
+  }
+
+  .cable-right, .hook-right {
+    animation: hook-bob 3s ease-in-out infinite 0.5s;
+  }
+
+  .floor-2 {
+    animation: floor-build 3s ease-in-out infinite;
+  }
+
+  .floor-3 {
+    animation: floor-build 3s ease-in-out infinite 1s;
+  }
+
+  .window-anim-1,
+  .window-anim-2,
+  .window-anim-3 {
+    animation: window-flicker 2s ease-in-out infinite;
+  }
+
+  .window-anim-2 {
+    animation-delay: 0.6s;
+  }
+
+  .window-anim-3 {
+    animation-delay: 1.2s;
+  }
+
+  .progress-fill {
+    animation: progress-grow 4s ease-in-out infinite;
+  }
+
+  @keyframes crane-sway-left {
+    0%, 100% { transform: rotate(-1deg); }
+    50% { transform: rotate(1deg); }
+  }
+
+  @keyframes crane-sway-right {
+    0%, 100% { transform: rotate(1deg); }
+    50% { transform: rotate(-1deg); }
+  }
+
+  @keyframes arm-swing-left {
+    0%, 100% { transform: rotate(-1.5deg); }
+    50% { transform: rotate(1.5deg); }
+  }
+
+  @keyframes arm-swing-right {
+    0%, 100% { transform: rotate(1.5deg); }
+    50% { transform: rotate(-1.5deg); }
+  }
+
+  @keyframes hook-bob {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(4px); }
+  }
+
+  @keyframes floor-build {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.7; }
+  }
+
+  @keyframes window-flicker {
+    0%, 100% { opacity: 0.3; }
+    50% { opacity: 0.8; }
+  }
+
+  @keyframes progress-grow {
+    0% { width: 10px; }
+    50% { width: 40px; }
+    100% { width: 10px; }
   }
 }

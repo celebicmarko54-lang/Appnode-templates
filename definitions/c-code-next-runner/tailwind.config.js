@@ -380,6 +380,12 @@ module.exports = {
           '-webkit-text-fill-color': 'transparent',
           'background-clip': 'text',
         },
+        '.text-gradient-blue': {
+          'background': 'linear-gradient(90deg, #3b82f6 0%, #60a5fa 50%, #93c5fd 100%)',
+          '-webkit-background-clip': 'text',
+          '-webkit-text-fill-color': 'transparent',
+          'background-clip': 'text',
+        },
         '.glass': {
           'background': 'rgba(255, 255, 255, 0.1)',
           'backdrop-filter': 'blur(10px)',
