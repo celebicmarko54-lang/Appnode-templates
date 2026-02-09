@@ -9,81 +9,145 @@ export function HomePage() {
     <div className="min-h-screen flex flex-col items-center justify-center p-4 overflow-hidden relative" style={{ background: '#1a1a1a' }}>
       <ThemeToggle />
 
-      <div className="text-center space-y-8 relative z-10 animate-fade-in w-full">
+      <div className="text-center space-y-6 relative z-10 animate-fade-in w-full">
         {/* Animated Construction Cranes */}
         <div className="flex justify-center">
           <div className="cranes-container">
             {/* Left Crane */}
-            <svg className="crane crane-left" width="90" height="100" viewBox="0 0 90 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-              {/* Crane base */}
-              <rect x="38" y="85" width="14" height="15" rx="2" fill="#3b82f6" opacity="0.9" />
-              {/* Crane tower */}
-              <rect x="42" y="20" width="6" height="65" fill="#60a5fa" />
-              {/* Crane arm (jib) */}
-              <rect x="10" y="18" width="55" height="5" rx="1" fill="#3b82f6" className="crane-arm-left" />
+            <svg className="crane crane-left" width="120" height="140" viewBox="0 0 120 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+              {/* Base platform */}
+              <rect x="30" y="125" width="30" height="8" rx="2" fill="#1e3a5f" />
+              <rect x="35" y="120" width="20" height="8" rx="1" fill="#2563eb" />
+              {/* Tower - lattice structure */}
+              <rect x="43" y="22" width="4" height="100" fill="#3b82f6" />
+              <rect x="53" y="22" width="4" height="100" fill="#3b82f6" />
+              {/* Lattice cross-bracing */}
+              <line x1="43" y1="30" x2="57" y2="45" stroke="#60a5fa" strokeWidth="1" opacity="0.7" />
+              <line x1="57" y1="30" x2="43" y2="45" stroke="#60a5fa" strokeWidth="1" opacity="0.7" />
+              <line x1="43" y1="48" x2="57" y2="63" stroke="#60a5fa" strokeWidth="1" opacity="0.7" />
+              <line x1="57" y1="48" x2="43" y2="63" stroke="#60a5fa" strokeWidth="1" opacity="0.7" />
+              <line x1="43" y1="66" x2="57" y2="81" stroke="#60a5fa" strokeWidth="1" opacity="0.7" />
+              <line x1="57" y1="66" x2="43" y2="81" stroke="#60a5fa" strokeWidth="1" opacity="0.7" />
+              <line x1="43" y1="84" x2="57" y2="99" stroke="#60a5fa" strokeWidth="1" opacity="0.7" />
+              <line x1="57" y1="84" x2="43" y2="99" stroke="#60a5fa" strokeWidth="1" opacity="0.7" />
+              <line x1="43" y1="102" x2="57" y2="117" stroke="#60a5fa" strokeWidth="1" opacity="0.7" />
+              <line x1="57" y1="102" x2="43" y2="117" stroke="#60a5fa" strokeWidth="1" opacity="0.7" />
+              {/* Operator cabin */}
+              <rect x="38" y="22" width="24" height="14" rx="3" fill="#1d4ed8" />
+              <rect x="40" y="25" width="8" height="6" rx="1" fill="#60a5fa" opacity="0.5" />
+              {/* Jib (arm) */}
+              <rect x="2" y="18" width="96" height="4" rx="1" fill="#3b82f6" className="crane-arm-left" />
+              {/* Jib lattice */}
+              <line x1="5" y1="18" x2="15" y2="22" stroke="#60a5fa" strokeWidth="0.8" opacity="0.5" />
+              <line x1="20" y1="18" x2="30" y2="22" stroke="#60a5fa" strokeWidth="0.8" opacity="0.5" />
+              <line x1="65" y1="18" x2="75" y2="22" stroke="#60a5fa" strokeWidth="0.8" opacity="0.5" />
+              <line x1="80" y1="18" x2="90" y2="22" stroke="#60a5fa" strokeWidth="0.8" opacity="0.5" />
               {/* Counter-weight */}
-              <rect x="10" y="14" width="12" height="9" rx="1" fill="#2563eb" />
-              {/* Cabin */}
-              <rect x="38" y="18" width="10" height="10" rx="2" fill="#1d4ed8" />
+              <rect x="2" y="10" width="16" height="10" rx="2" fill="#1e40af" />
+              <rect x="4" y="12" width="12" height="6" rx="1" fill="#2563eb" />
+              {/* Top mast */}
+              <line x1="50" y1="4" x2="50" y2="18" stroke="#3b82f6" strokeWidth="2" />
+              {/* Stay cables */}
+              <line x1="50" y1="4" x2="10" y2="18" stroke="#93c5fd" strokeWidth="0.8" opacity="0.6" />
+              <line x1="50" y1="4" x2="90" y2="18" stroke="#93c5fd" strokeWidth="0.8" opacity="0.6" />
               {/* Hook cable */}
-              <line x1="58" y1="23" x2="58" y2="55" stroke="#93c5fd" strokeWidth="1.5" className="cable-left" />
-              {/* Hook */}
-              <path d="M55 55 L61 55 L59 62 Q58 65 57 62 L55 55Z" fill="#60a5fa" className="hook-left" />
-              {/* Cross bracing on tower */}
-              <line x1="42" y1="30" x2="48" y2="45" stroke="#93c5fd" strokeWidth="0.8" opacity="0.5" />
-              <line x1="48" y1="30" x2="42" y2="45" stroke="#93c5fd" strokeWidth="0.8" opacity="0.5" />
-              <line x1="42" y1="50" x2="48" y2="65" stroke="#93c5fd" strokeWidth="0.8" opacity="0.5" />
-              <line x1="48" y1="50" x2="42" y2="65" stroke="#93c5fd" strokeWidth="0.8" opacity="0.5" />
+              <line x1="78" y1="22" x2="78" y2="70" stroke="#93c5fd" strokeWidth="1.2" className="cable-left" strokeDasharray="3,2" />
+              {/* Hook assembly */}
+              <circle cx="78" cy="72" r="3" fill="#60a5fa" className="hook-left" />
+              <path d="M75 75 L78 82 L81 75" stroke="#60a5fa" strokeWidth="1.5" fill="none" className="hook-left" />
+              {/* Warning light */}
+              <circle cx="50" cy="4" r="2" fill="#f59e0b" className="warning-light" />
             </svg>
 
             {/* Building under construction (center) */}
-            <svg className="building-progress" width="60" height="70" viewBox="0 0 60 70" fill="none" xmlns="http://www.w3.org/2000/svg">
-              {/* Building floors */}
-              <rect x="5" y="50" width="50" height="20" rx="2" fill="#1e3a5f" stroke="#3b82f6" strokeWidth="0.5" />
-              <rect x="5" y="32" width="50" height="18" rx="2" fill="#1e3a5f" stroke="#3b82f6" strokeWidth="0.5" className="floor-2" />
-              <rect x="5" y="14" width="50" height="18" rx="2" fill="#1e3a5f" stroke="#3b82f6" strokeWidth="0.5" className="floor-3" />
-              {/* Windows */}
-              <rect x="10" y="55" width="8" height="6" rx="1" fill="#60a5fa" opacity="0.6" />
-              <rect x="22" y="55" width="8" height="6" rx="1" fill="#60a5fa" opacity="0.4" />
-              <rect x="38" y="55" width="8" height="6" rx="1" fill="#60a5fa" opacity="0.6" />
-              <rect x="10" y="37" width="8" height="6" rx="1" fill="#60a5fa" opacity="0.3" className="window-anim-1" />
-              <rect x="22" y="37" width="8" height="6" rx="1" fill="#60a5fa" opacity="0.5" className="window-anim-2" />
-              <rect x="38" y="37" width="8" height="6" rx="1" fill="#60a5fa" opacity="0.3" className="window-anim-3" />
-              {/* Progress bar at top */}
-              <rect x="5" y="10" width="50" height="3" rx="1.5" fill="#1e293b" />
-              <rect x="5" y="10" width="30" height="3" rx="1.5" fill="#3b82f6" className="progress-fill" />
+            <svg className="building-progress" width="80" height="100" viewBox="0 0 80 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+              {/* Foundation */}
+              <rect x="5" y="92" width="70" height="8" rx="1" fill="#1e3a5f" />
+              {/* Floor 1 - complete */}
+              <rect x="8" y="72" width="64" height="20" rx="2" fill="#1e3a5f" stroke="#2563eb" strokeWidth="0.8" />
+              <rect x="12" y="76" width="8" height="10" rx="1" fill="#60a5fa" opacity="0.7" />
+              <rect x="24" y="76" width="8" height="10" rx="1" fill="#60a5fa" opacity="0.5" />
+              <rect x="36" y="76" width="8" height="10" rx="1" fill="#60a5fa" opacity="0.7" />
+              <rect x="48" y="76" width="8" height="10" rx="1" fill="#60a5fa" opacity="0.4" />
+              <rect x="60" y="76" width="8" height="10" rx="1" fill="#60a5fa" opacity="0.6" />
+              {/* Floor 2 - building */}
+              <rect x="8" y="52" width="64" height="20" rx="2" fill="#1e3a5f" stroke="#2563eb" strokeWidth="0.8" className="floor-2" />
+              <rect x="12" y="56" width="8" height="10" rx="1" fill="#60a5fa" opacity="0.3" className="window-anim-1" />
+              <rect x="24" y="56" width="8" height="10" rx="1" fill="#60a5fa" opacity="0.2" className="window-anim-2" />
+              <rect x="36" y="56" width="8" height="10" rx="1" fill="#60a5fa" opacity="0.3" className="window-anim-3" />
+              <rect x="48" y="56" width="8" height="10" rx="1" fill="#60a5fa" opacity="0.2" className="window-anim-1" />
+              <rect x="60" y="56" width="8" height="10" rx="1" fill="#60a5fa" opacity="0.3" className="window-anim-2" />
+              {/* Floor 3 - in progress */}
+              <rect x="8" y="32" width="64" height="20" rx="2" fill="#1e3a5f" stroke="#2563eb" strokeWidth="0.8" className="floor-3" opacity="0.6" />
+              {/* Steel beams being placed */}
+              <line x1="10" y1="38" x2="70" y2="38" stroke="#3b82f6" strokeWidth="1" className="beam-1" opacity="0.5" />
+              <line x1="10" y1="44" x2="50" y2="44" stroke="#3b82f6" strokeWidth="1" className="beam-2" opacity="0.4" />
+              {/* Scaffolding */}
+              <line x1="6" y1="32" x2="6" y2="92" stroke="#60a5fa" strokeWidth="0.6" opacity="0.3" />
+              <line x1="74" y1="32" x2="74" y2="92" stroke="#60a5fa" strokeWidth="0.6" opacity="0.3" />
+              <line x1="4" y1="52" x2="8" y2="52" stroke="#60a5fa" strokeWidth="0.6" opacity="0.3" />
+              <line x1="72" y1="52" x2="76" y2="52" stroke="#60a5fa" strokeWidth="0.6" opacity="0.3" />
+              <line x1="4" y1="72" x2="8" y2="72" stroke="#60a5fa" strokeWidth="0.6" opacity="0.3" />
+              <line x1="72" y1="72" x2="76" y2="72" stroke="#60a5fa" strokeWidth="0.6" opacity="0.3" />
+              {/* Sparks / welding effect */}
+              <circle cx="35" cy="35" r="2" fill="#f59e0b" className="spark-1" />
+              <circle cx="37" cy="33" r="1.5" fill="#fbbf24" className="spark-2" />
+              <circle cx="33" cy="34" r="1" fill="#fcd34d" className="spark-3" />
             </svg>
 
             {/* Right Crane */}
-            <svg className="crane crane-right" width="90" height="100" viewBox="0 0 90 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-              {/* Crane base */}
-              <rect x="38" y="85" width="14" height="15" rx="2" fill="#3b82f6" opacity="0.9" />
-              {/* Crane tower */}
-              <rect x="42" y="25" width="6" height="60" fill="#60a5fa" />
-              {/* Crane arm (jib) */}
-              <rect x="25" y="22" width="55" height="5" rx="1" fill="#3b82f6" className="crane-arm-right" />
+            <svg className="crane crane-right" width="120" height="140" viewBox="0 0 120 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+              {/* Base platform */}
+              <rect x="60" y="125" width="30" height="8" rx="2" fill="#1e3a5f" />
+              <rect x="65" y="120" width="20" height="8" rx="1" fill="#2563eb" />
+              {/* Tower - lattice structure */}
+              <rect x="63" y="28" width="4" height="94" fill="#3b82f6" />
+              <rect x="73" y="28" width="4" height="94" fill="#3b82f6" />
+              {/* Lattice cross-bracing */}
+              <line x1="63" y1="35" x2="77" y2="50" stroke="#60a5fa" strokeWidth="1" opacity="0.7" />
+              <line x1="77" y1="35" x2="63" y2="50" stroke="#60a5fa" strokeWidth="1" opacity="0.7" />
+              <line x1="63" y1="53" x2="77" y2="68" stroke="#60a5fa" strokeWidth="1" opacity="0.7" />
+              <line x1="77" y1="53" x2="63" y2="68" stroke="#60a5fa" strokeWidth="1" opacity="0.7" />
+              <line x1="63" y1="71" x2="77" y2="86" stroke="#60a5fa" strokeWidth="1" opacity="0.7" />
+              <line x1="77" y1="71" x2="63" y2="86" stroke="#60a5fa" strokeWidth="1" opacity="0.7" />
+              <line x1="63" y1="89" x2="77" y2="104" stroke="#60a5fa" strokeWidth="1" opacity="0.7" />
+              <line x1="77" y1="89" x2="63" y2="104" stroke="#60a5fa" strokeWidth="1" opacity="0.7" />
+              <line x1="63" y1="107" x2="77" y2="118" stroke="#60a5fa" strokeWidth="1" opacity="0.7" />
+              <line x1="77" y1="107" x2="63" y2="118" stroke="#60a5fa" strokeWidth="1" opacity="0.7" />
+              {/* Operator cabin */}
+              <rect x="58" y="28" width="24" height="14" rx="3" fill="#1d4ed8" />
+              <rect x="72" y="31" width="8" height="6" rx="1" fill="#60a5fa" opacity="0.5" />
+              {/* Jib (arm) */}
+              <rect x="22" y="24" width="96" height="4" rx="1" fill="#3b82f6" className="crane-arm-right" />
+              {/* Jib lattice */}
+              <line x1="25" y1="24" x2="35" y2="28" stroke="#60a5fa" strokeWidth="0.8" opacity="0.5" />
+              <line x1="40" y1="24" x2="50" y2="28" stroke="#60a5fa" strokeWidth="0.8" opacity="0.5" />
+              <line x1="85" y1="24" x2="95" y2="28" stroke="#60a5fa" strokeWidth="0.8" opacity="0.5" />
+              <line x1="100" y1="24" x2="110" y2="28" stroke="#60a5fa" strokeWidth="0.8" opacity="0.5" />
               {/* Counter-weight */}
-              <rect x="68" y="18" width="12" height="9" rx="1" fill="#2563eb" />
-              {/* Cabin */}
-              <rect x="42" y="22" width="10" height="10" rx="2" fill="#1d4ed8" />
+              <rect x="102" y="16" width="16" height="10" rx="2" fill="#1e40af" />
+              <rect x="104" y="18" width="12" height="6" rx="1" fill="#2563eb" />
+              {/* Top mast */}
+              <line x1="70" y1="10" x2="70" y2="24" stroke="#3b82f6" strokeWidth="2" />
+              {/* Stay cables */}
+              <line x1="70" y1="10" x2="30" y2="24" stroke="#93c5fd" strokeWidth="0.8" opacity="0.6" />
+              <line x1="70" y1="10" x2="110" y2="24" stroke="#93c5fd" strokeWidth="0.8" opacity="0.6" />
               {/* Hook cable */}
-              <line x1="32" y1="27" x2="32" y2="58" stroke="#93c5fd" strokeWidth="1.5" className="cable-right" />
-              {/* Hook */}
-              <path d="M29 58 L35 58 L33 65 Q32 68 31 65 L29 58Z" fill="#60a5fa" className="hook-right" />
-              {/* Cross bracing on tower */}
-              <line x1="42" y1="35" x2="48" y2="50" stroke="#93c5fd" strokeWidth="0.8" opacity="0.5" />
-              <line x1="48" y1="35" x2="42" y2="50" stroke="#93c5fd" strokeWidth="0.8" opacity="0.5" />
-              <line x1="42" y1="55" x2="48" y2="70" stroke="#93c5fd" strokeWidth="0.8" opacity="0.5" />
-              <line x1="48" y1="55" x2="42" y2="70" stroke="#93c5fd" strokeWidth="0.8" opacity="0.5" />
+              <line x1="42" y1="28" x2="42" y2="76" stroke="#93c5fd" strokeWidth="1.2" className="cable-right" strokeDasharray="3,2" />
+              {/* Hook assembly */}
+              <circle cx="42" cy="78" r="3" fill="#60a5fa" className="hook-right" />
+              <path d="M39 81 L42 88 L45 81" stroke="#60a5fa" strokeWidth="1.5" fill="none" className="hook-right" />
+              {/* Warning light */}
+              <circle cx="70" cy="10" r="2" fill="#f59e0b" className="warning-light" />
             </svg>
           </div>
         </div>
 
-        <div className="space-y-3">
-          <h1 className="text-5xl md:text-7xl font-display font-bold text-balance leading-tight text-white">
+        <div className="space-y-2">
+          <h1 className="text-3xl md:text-4xl font-display font-bold text-balance leading-tight text-white">
             Building your <span className="text-gradient-blue">project!</span>
           </h1>
-          <p className="text-lg md:text-xl max-w-xl mx-auto text-pretty" style={{ color: '#93c5fd' }}>
+          <p className="text-sm md:text-base max-w-xl mx-auto text-pretty" style={{ color: '#93c5fd' }}>
             Your project will be ready soon!
           </p>
         </div>
